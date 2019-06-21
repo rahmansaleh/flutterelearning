@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterelearning/home.dart';
 
 class LoginLess extends StatelessWidget {
   @override
@@ -74,7 +75,14 @@ class _LoginFulState extends State<LoginFul> {
             ),
 
             new MaterialButton(
-              onPressed: (){},
+              onPressed: (){
+
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext) => new HomeLess(),
+                  )
+                );
+              },
               height: 40.0,
               minWidth: MediaQuery.of(context).size.width,
               color: Colors.blue,
@@ -107,16 +115,11 @@ class _LoginFulState extends State<LoginFul> {
         ),
       ),
     );
+    
     return SafeArea(
       child: Scaffold(
         body: main_body,
       ),
-    );
-
-    return Scaffold(
-      
-      
-      body: main_body,
     );
   }
 }
